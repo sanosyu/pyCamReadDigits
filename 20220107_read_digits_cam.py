@@ -135,17 +135,10 @@ while True:
 
     if images is not None:
         txt = read_number_frame(images)
-        cv2.putText(frame, txt, (30, 100), cv2.FONT_HERSHEY_PLAIN, 3, (0, 255, 0), 1, cv2.LINE_AA)
-        print(txt)
-
-        plt.clf()
-        plt.imshow(cv2.cvtColor(images[0][1], cv2.COLOR_BGR2RGB))
-        plt.pause(0.01)
-
+        cv2.putText(frame, txt, (30, 100), cv2.FONT_HERSHEY_PLAIN, 3, (0, 255, 0), 2, cv2.LINE_AA)
+        cv2.imshow('display', images[0][1])
 
     cv2.imshow('frame', cv2.resize(frame, dsize=None, fx=0.5, fy=0.5))
-
-
 
     key = cv2.waitKey(1)
     if key == 27:           # Esc
