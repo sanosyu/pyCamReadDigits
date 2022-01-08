@@ -132,7 +132,6 @@ while True:
     frame = bgrExtraction(frame)
 
     images = extract_display(frame)
-
     if images is not None:
         txt = read_number_frame(images)
         cv2.putText(frame, txt, (30, 100), cv2.FONT_HERSHEY_PLAIN, 3, (0, 255, 0), 2, cv2.LINE_AA)
